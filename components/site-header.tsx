@@ -1,17 +1,28 @@
 import Link from "next/link"
-import { siteConfig } from "@/config/site"
 
+import { siteConfig } from "@/config/site"
 import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { buttonVariants } from "@/components/ui/button"
+import Search from "./com/Search"
 
-export function SiteHeader() {
+interface propsType {
+  query: string
+  setQuery: React.Dispatch<React.SetStateAction<string>>
+}
+
+export function SiteHeader({ query, setQuery }: propsType) {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-b-slate-200 bg-white dark:border-b-slate-700 dark:bg-slate-900">
-      <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
-        <MainNav items={siteConfig.mainNav} />
-        <div className="flex flex-1 items-center justify-end space-x-4">
+      <div className="site-header container h-12">
+        <div>
+          <MainNav items={siteConfig.mainNav} />
+        </div>
+        <div>
+          <Search query={query} setQuery={setQuery} />
+        </div>
+        <div className="flex items-center justify-end space-x-4">
           <nav className="flex items-center space-x-1">
             <Link
               href={siteConfig.links.github}
