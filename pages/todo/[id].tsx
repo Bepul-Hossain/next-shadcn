@@ -8,7 +8,7 @@ const Hello = ({ data, data2 }) => {
   return (
     <>
       <h1 className="text-2xl">
-        Data coming from: <Link href={data.text}>{data.text}</Link>
+        Data coming from: <Link className="text-red-600" href={data.text}>{data.text}</Link>
       </h1>
       <p>Created: {data.createdDate}</p>
       <p>Random Number: {data.id}</p>
@@ -16,7 +16,8 @@ const Hello = ({ data, data2 }) => {
       <hr />
       <hr />
       <h1 className="text-2xl">
-        coming from https://jsonplaceholder.typicode.com/posts
+        <Link className="text-red-600" href="https://jsonplaceholder.typicode.com/posts">coming from jsonplaceholder</Link>
+     
       </h1>
       <ol className="list-decimal">
         {data2 &&
