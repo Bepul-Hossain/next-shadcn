@@ -2,7 +2,6 @@ import Item from "./dataTypes";
 const SONGS:Item[] = [
     {
         name: `Amake Amar Moto Thakte Dao Lyrics In Bengali:`,
-     
         lyrics: `
         আমাকে আমার মতো থাকতে দাও
         আমি নিজেকে নিজের মতো গুছিয়ে নিয়েছি (x2)
