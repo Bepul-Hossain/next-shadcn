@@ -11,6 +11,7 @@ export function Layout({ children, query, setQuery }: LayoutProps) {
     <>
       <SiteHeader query={query} setQuery={setQuery}/>
       <main>{children}</main>
+      <h3 className="flex justify-center bg-orange-600">Footer</h3>
     </>
   )
 }
