@@ -1,24 +1,45 @@
-import React from 'react'
-import { GetServerSideProps } from 'next';
-import Link from 'next/link';
+import React from "react"
+import { GetServerSideProps } from "next"
+import Link from "next/link"
 
- const  Hello = ({ data })=> {
-    return(
-      <>
-        <h1>Data coming from: <Link href={data.text}>{data.text}</Link></h1>
-        <h2>Created: {data.createdDate}</h2>
-        <h2>Random Number: {data.id}</h2>
-      </>
-    )
+const Hello = ({ data, data2 }) => {
+  const { title } = data2[0]
+  console.log(title)
+  return (
+    <>
+      <h1 className="text-2xl">
+        Data coming from: <Link href={data.text}>{data.text}</Link>
+      </h1>
+      <p>Created: {data.createdDate}</p>
+      <p>Random Number: {data.id}</p>
+      <hr />
+      <hr />
+      <hr />
+      <h1 className="text-2xl">
+        coming from https://jsonplaceholder.typicode.com/posts
+      </h1>
+      <ol className="list-decimal">
+        {data2 &&
+          data2.slice(0, 10).map(({ title, id }) => (
+            <li key={id}>
+              {id}. {title}
+            </li>
+          ))}
+      </ol>
+    </>
+  )
 }
 export default Hello
-// This gets called on every request
-export const getServerSideProps : GetServerSideProps  = async () => {
-    const p = await fetch(`http://localhost:3000/api/apiTest`) 
-    const data = await p.json()
-    return {
-      props: {
-        data: data
-      }
-    }
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const p = await fetch(`http://localhost:3000/api/apiTest`)
+  const data = await p.json()
+  const q = await fetch(`https://jsonplaceholder.typicode.com/posts`)
+  const data2 = await q.json()
+  return {
+    props: {
+      data: data,
+      data2: data2,
+    },
   }
+}
