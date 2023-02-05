@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import LocalVideo from "./LocalVideo";
 import VideoPlayer from "./video";
 interface Props{
   name?: string
@@ -35,6 +36,7 @@ const Song: React.FC<Props> =({name, index, lyrics, videoLink}): JSX.Element=>{
           {/* {videoLink && <a href={videoLink} target="_blank" rel="noreferrer">Video link<br /></a>} */}
           {/* {videoLink && <button onClick={handlePlay}>{isPlay?"remove video":"start video"}</button>} */}
           {videoLink && isClick &&<VideoPlayer videoLink={videoLink}/>}
+          {!videoLink && isClick &&<LocalVideo videoLink="/video/amake-amar.mp4"/>}
           {lyrics}
         </div>
       </div>
