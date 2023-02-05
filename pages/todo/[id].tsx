@@ -1,9 +1,14 @@
 import React from 'react'
 import { GetServerSideProps } from 'next';
+import Link from 'next/link';
 
  const  Hello = ({ data })=> {
     return(
-        <h1>{data.text}</h1>
+      <>
+        <h1>Data coming from: <Link href={data.text}>{data.text}</Link></h1>
+        <h2>Created: {data.createdDate}</h2>
+        <h2>Random Number: {data.id}</h2>
+      </>
     )
 }
 export default Hello

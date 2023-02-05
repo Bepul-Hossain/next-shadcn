@@ -11,6 +11,7 @@ export function MainNav() {
           {siteConfig.name}
         </span>
       </Link>
+      <Link href='todo/2'>Data from api</Link>
     </div>
   )
 }
