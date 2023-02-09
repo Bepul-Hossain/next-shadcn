@@ -13,8 +13,8 @@ const VideoPlay = ({ videoLink, poster }: propsTypes) => {
       <ReactPlayer
         className="react-player fixed-bottom"
         url={videoLink}
-        width="auto"
-        height="auto"
+        width="100%"
+        height="100%"
         light={poster}
         playing
       />
