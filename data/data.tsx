@@ -98,7 +98,6 @@ const SONGS:Item[] = [
     },
     {
         name: `Ami jare basi valo kajoler ceye o kalo:`,
-        videoLink: `https://www.youtube.com/watch?v=O2gJYmS-Z78`,
         lyrics: `
         দিলোনা দিলোনা, নিলো মন দিলোনা।
         এতো যে নিঠুর বন্ধু জানা ছিলো না গো।

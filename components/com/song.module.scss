@@ -1,0 +1,36 @@
+.item {
+    background-color: aqua;
+    padding: 2px;
+    border: 2px solid pink;
+    // height: 210px;
+    // width: 300px;
+    display: block;
+}
+.lyrics_wrapper {
+    height: 0;
+    overflow: hidden;
+    transition: height ease 0.75s;
+}
+.control {
+    font-size: 20px;
+    margin-left: 24px;
+}
+
+.lyrics {
+    background-color: #f7f7f7;
+    padding: 20px;
+    white-space: pre-line;
+}
+.button {
+    font-size: 16px;
+    background-color: #008593;
+    color: #fff;
+    text-align: left;
+    font-weight: 700;
+    // display: flex;
+    width: 100%;
+    // justify-content: space-between;
+    padding: 10px 8px;
+    cursor: pointer;
+    border: 2px solid pink;
+}

@@ -3,7 +3,7 @@ type propsTypes = {
   }
 const LocalVideo = ({ videoLink }: propsTypes) => {
   return (
-    <video controls src={videoLink} style={{ width: "auto", height: "auto" }} />
+    <video poster="https://placehold.it/640x360.jpg" controls src={videoLink} style={{ width: "300px", height: "260px" }} />
   )
 }
 

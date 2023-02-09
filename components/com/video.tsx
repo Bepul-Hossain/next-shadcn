@@ -3,10 +3,11 @@ import ReactPlayer from "react-player/youtube"
 // const ReactPlayer = React.lazy(() => import('react-player/youtube'));
 
 type propsTypes = {
-  videoLink: string
+  videoLink: string,
+  poster:string
 }
 
-const VideoPlay = ({ videoLink }: propsTypes) => {
+const VideoPlay = ({ videoLink, poster }: propsTypes) => {
   return (
     <div className="player-wrapper">
       <ReactPlayer
@@ -14,7 +15,7 @@ const VideoPlay = ({ videoLink }: propsTypes) => {
         url={videoLink}
         width="auto"
         height="auto"
-        light='https://placehold.it/640x360.jpg'
+        light={poster}
         playing
       />
     </div>
