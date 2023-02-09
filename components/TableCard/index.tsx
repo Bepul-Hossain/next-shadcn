@@ -1,11 +1,13 @@
 import React from "react"
+import Image from "next/image"
 import classNames from "classnames"
 
 import styles from "./tableCard.module.scss"
 import { Props } from "./types"
+import Link from "next/link"
 
 export default function TableCard(props: Props) {
-  const { songType } = props
+  const { songType, title, brand } = props
   return (
     <div
       className={classNames({
@@ -13,6 +15,10 @@ export default function TableCard(props: Props) {
         [styles.listenNow]: songType === "Listen now",
         [styles.madeForYou]: songType === "Made for you",
       })}
-    ></div>
+    >
+      <Link href={""}>   <Image src="/img/pic.png" width={200} height={200} alt="hello" /></Link>
+      <p>{title? title:(<><br /></>)}</p>
+      <h5>{brand?brand:(<><br/></>)}</h5>
+    </div>
   )
 }

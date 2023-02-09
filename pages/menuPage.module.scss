@@ -1,9 +1,11 @@
-.cardHolder{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 20px;
+.listenCardHolder{
+ 
+    h3{
+        font-size: 20px;
+    }
+    p{
+        font-size: 12px;
+    }
 }
 .listenNow{
     display: flex;
@@ -11,6 +13,15 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 20px;
+    margin-top: 10px;
+}
+.madeForYouCardHolder{
+    h3{
+        font-size: 20px;
+    }
+    p{
+        font-size: 12px;
+    }
 }
 .madeForYou{
     display: flex;
@@ -18,4 +29,5 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 20px;
+    margin-top: 10px;
 }
