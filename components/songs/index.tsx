@@ -1,6 +1,6 @@
 import Item from "@/data/dataTypes"
 
-import Song from "./Song"
+import Song from "../song"
 
 // type UserType = {
 //     name?: string;

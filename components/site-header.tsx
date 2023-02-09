@@ -1,6 +1,6 @@
 import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
-import Search from "./com/Search"
+import Search from "./search"
 
 interface propsType {
   query: string

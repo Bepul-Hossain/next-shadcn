@@ -2,7 +2,7 @@ import { useState } from "react"
 import Head from "next/head"
 import SONGS_DATA from "@/data/data"
 
-import Songs from "@/components/com/Songs"
+import Songs from "@/components/songs"
 import { Layout } from "@/components/layout"
 
 export default function IndexPage() {

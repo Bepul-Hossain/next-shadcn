@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react"
 
-import LocalVideo from "./LocalVideo"
-import styles from "./song.module.scss"
-import VideoPlayer from "./video"
+import LocalVideo from "../localVideoPlayer"
+import styles from "./index.module.scss"
+import VideoPlayer from "../reactVideoPlayer"
 
 interface Props {
   name?: string
