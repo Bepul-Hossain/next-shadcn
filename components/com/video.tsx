@@ -14,7 +14,7 @@ const VideoPlay = ({ videoLink }: propsTypes) => {
         url={videoLink}
         width="auto"
         height="auto"
-        controls={true}
+        light='https://placehold.it/640x360.jpg'
         playing
       />
     </div>

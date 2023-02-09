@@ -29,6 +29,16 @@ const MenusPage = () => {
       title: "cholona hoi",
       brand: "car poka",
     },
+    {
+      songType: "Listen now",
+      title: "cholona hoi",
+      brand: "car poka",
+    },
+    {
+      songType: "Listen now",
+      title: "cholona hoi",
+      brand: "car poka",
+    },
   ]
   const table2: Table[] = [
     {
