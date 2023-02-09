@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react"
 
 import LocalVideo from "../localVideoPlayer"
-import styles from "./song.module.scss"
 import VideoPlayer from "../reactVideoPlayer"
+import styles from "./song.module.scss"
 
 interface Props {
   name?: string
@@ -37,10 +37,16 @@ const Song: React.FC<Props> = ({
       )}
       {!videoLink && <LocalVideo videoLink="/video/amake-amar.mp4" />}
 
-      <li className={`para ${isClick ? "active" : ""}`}>
-        <button className="button" onClick={handleToggle}>
-          {index}. &nbsp; {name}
-          <span className={styles.control}>{isClick ? "—" : "+"} </span>
+      <li>
+        <button className={styles.button} onClick={handleToggle}>
+          <div className={styles.buttonDesign}>
+            <div className={styles.name}>
+              {index}. &nbsp; {name}
+            </div>
+            <div className={styles.control}>{isClick ? "—" : "+"}</div>
+          </div>
+          {/* {index}. &nbsp; {name}
+          <span className={styles.control}>{isClick ? "—" : "+"} </span> */}
         </button>
         <div
           ref={contentEl}
@@ -51,13 +57,7 @@ const Song: React.FC<Props> = ({
               : { height: "0px" }
           }
         >
-          <div className={styles.lyrics}>
-            {/* {videoLink && <a href={videoLink} target="_blank" rel="noreferrer">Video link<br /></a>} */}
-            {/* {videoLink && <button onClick={handlePlay}>{isPlay?"remove video":"start video"}</button>} */}
-            {/* {videoLink && isClick &&<VideoPlayer videoLink={videoLink}/>}
-          {!videoLink && isClick &&<LocalVideo videoLink="/video/amake-amar.mp4"/>} */}
-            {lyrics && lyrics}
-          </div>
+          <div className={styles.lyrics}>{lyrics && lyrics}</div>
         </div>
       </li>
     </div>
