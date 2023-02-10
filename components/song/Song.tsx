@@ -1,3 +1,4 @@
+import Link from "next/link"
 import React, { useEffect, useRef, useState } from "react"
 
 import LocalVideo from "../localVideoPlayer"
@@ -38,7 +39,7 @@ const Song: React.FC<Props> = ({
       {!videoLink && <LocalVideo videoLink="/video/amake-amar.mp4" />}
 
       <li>
-        <button className={styles.button} onClick={handleToggle}>
+        <Link href="/details/detailsId" className={styles.button} onClick={handleToggle}>
           <div className={styles.buttonDesign}>
             <div className={styles.name}>
               {index}. &nbsp; {name}
@@ -47,8 +48,8 @@ const Song: React.FC<Props> = ({
           </div>
           {/* {index}. &nbsp; {name}
           <span className={styles.control}>{isClick ? "—" : "+"} </span> */}
-        </button>
-        <div
+        </Link>
+        {/* <div
           ref={contentEl}
           className={styles.lyrics_wrapper}
           style={
@@ -58,7 +59,7 @@ const Song: React.FC<Props> = ({
           }
         >
           <div className={styles.lyrics}>{lyrics && lyrics}</div>
-        </div>
+        </div> */}
       </li>
     </div>
   )
