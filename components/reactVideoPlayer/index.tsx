@@ -9,7 +9,7 @@ type propsTypes = {
 
 const ReactVideoPlayer = ({ videoLink, poster }: propsTypes) => {
   return (
-    <div className="player-wrapper">
+    <div style={{height: '91%', width:'100%'}}>
       <ReactPlayer
         className="react-player fixed-bottom"
         url={videoLink}
