@@ -7,7 +7,7 @@ type propsTypes = {
   poster:string
 }
 
-const VideoPlay = ({ videoLink, poster }: propsTypes) => {
+const ReactVideoPlayer = ({ videoLink, poster }: propsTypes) => {
   return (
     <div className="player-wrapper">
       <ReactPlayer
@@ -22,4 +22,4 @@ const VideoPlay = ({ videoLink, poster }: propsTypes) => {
   )
 }
 
-export default VideoPlay
+export default ReactVideoPlayer
