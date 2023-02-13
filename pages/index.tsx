@@ -40,7 +40,7 @@ export default function IndexPage() {
         {data ?.filter((item) =>
             item?.name?.toLowerCase().includes(query.toLowerCase())
           ).map((item, index) => (
-          <li key={index} style={{border:' 2px solid green', width:'300px', height:'200px'}}>
+          <li key={index}>
             {item.videoLink && (
               <ReactVideoPlay
                 videoLink={item.videoLink}
