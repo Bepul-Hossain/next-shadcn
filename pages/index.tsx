@@ -35,12 +35,12 @@ export default function IndexPage() {
       {/* <section className="flex justify-center bg-slate-400">
         <Songs data={SONGS_DATA} query={query} />
       </section> */}
-      <ul>
+      <ul style={{display:'flex', flexDirection:'row', justifyContent:'start', alignItems:'start', columnGap:'20px'}}>
         {/* {data.map((item)=><li >Name: {item.name}</li>)} */}
         {data ?.filter((item) =>
             item?.name?.toLowerCase().includes(query.toLowerCase())
           ).map((item, index) => (
-          <>
+          <li key={index} style={{border:' 2px solid green', width:'400px', height:'200px', }}>
             {item.videoLink && (
               <ReactVideoPlay
                 videoLink={item.videoLink}
@@ -53,7 +53,7 @@ export default function IndexPage() {
             <Link href="/details/[id]" as={`/details/${index}`}>
               {item.name}
             </Link>
-          </>
+          </li>
         ))}
         {/* {data
           ?.filter((item) =>
